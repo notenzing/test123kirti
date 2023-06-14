@@ -3,7 +3,7 @@
   "kind": "helm",
   "flavor": "default",
   "provided": false,
-  "disabled": true,
+  "disabled": false,
   "metadata": {},
   "version": "0.1",
   "spec": {
