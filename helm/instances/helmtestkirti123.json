@@ -8,7 +8,8 @@
   "version": "0.1",
   "spec": {
     "helm": {
-      "chart": "https://helm.appsmith.com",
+      "chart": "appsmith",
+      "repository": "https://helm.appsmith.com",
       "namespace": "test-namespace",
       "wait": false
     },
