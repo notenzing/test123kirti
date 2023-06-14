@@ -8,7 +8,7 @@
   "version": "0.1",
   "spec": {
     "helm": {
-      "chart": "https://github.com/DataDog/helm-charts/releases/download/datadog-2.30.13/datadog-2.30.13.tgz",
+      "chart": "https://helm.appsmith.com",
       "namespace": "test-namespace",
       "wait": false
     },
