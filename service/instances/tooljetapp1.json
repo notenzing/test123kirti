@@ -10,10 +10,75 @@
     "type": "application",
     "enable_host_anti_affinity": true,
     "release": {
-      "image": "",
+      "image": "tooljet/tooljet-ce:latest",
       "strategy": {
         "type": "Recreate"
-      }
+      },
+      "env": [
+        {
+          "name": "PG_HOST",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "pg_host"
+            }
+          }
+        },
+        {
+          "name": "PG_USER",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "pg_user"
+            }
+          }
+        },
+        {
+          "name": "PG_PASS",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "pg_password"
+            }
+          }
+        },
+        {
+          "name": "PG_DB",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "pg_db"
+            }
+          }
+        },
+        {
+          "name": "LOCKBOX_MASTER_KEY",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "lockbox_key"
+            }
+          }
+        },
+        {
+          "name": "SECRET_KEY_BASE",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "secret_key_base"
+            }
+          }
+        },
+        {
+          "name": "TOOLJET_HOST",
+          "valueFrom": {
+            "secretKeyRef": {
+              "name": "server",
+              "key": "tj_host"
+            }
+          }
+        }
+      ]
     },
     "runtime": {
       "volumes": {
@@ -26,7 +91,7 @@
       },
       "ports": {
         "http": {
-          "port": 80,
+          "port": 3000,
           "protocol": "tcp"
         }
       },
