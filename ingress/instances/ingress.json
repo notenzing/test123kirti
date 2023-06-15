@@ -1,33 +1,32 @@
 {
-  "kind": "ingress",
-  "$schema": "https://facets-cloud.github.io/facets-schemas/schemas/loadbalancer/ingress.schema.json",
-  "flavor": "aws_alb",
+  "$schema": "https://facets-cloud.github.io/facets-schemas/schemas/loadbalancer/loadbalancer.schema.json",
+  "flavor": "nlb_nginx",
   "disabled": false,
-  "version": "0.2",
-  "lifecycle": "ENVIRONMENT",
-  "provided": false,
-  "depends_on": [],
+  "version": "0.1",
+  "kind": "ingress",
   "metadata": {
-    "name": "test-nginx",
-    "annotations": {}
+    "name": "main",
+    "annotations": {
+      "nginx.ingress.kubernetes.io/use-regex": "true"
+    }
   },
   "spec": {
+    "basicAuth": false,
     "private": false,
-    "basic_auth": false,
-    "grpc": false,
-    "domains": {},
+    "force_ssl_redirection": true,
     "rules": {
-      "grafana1": {
-        "service_name": "tooljet",
+      "tooljet": {
+        "comment": "tooljet",
+        "domain_prefix": "",
         "path": "/api/health",
-        "port": 3000,
-        "domain_prefix": "tooljet",
-        "annotations": {
-          "app": ""
-        },
-        "disable_auth": false
+        "port": "${service.tooljet.out.interfaces.main.port}",
+        "service_name": "${service.tooljet.out.interfaces.main.name}"
       }
-    },
-    "force_ssl_redirection": true
+    }
+  },
+  "advanced": {
+    "gcp_alb": {
+      "enable_managed_certificates": false
+    }
   }
 }
