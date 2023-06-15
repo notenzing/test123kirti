@@ -18,7 +18,7 @@
     "domains": {},
     "rules": {
       "tooljet": {
-        "service_name": "tooljet-deployment",
+        "service_name": "tooljet",
         "path": "/",
         "port": 3000,
         "domain_prefix": "tooljet",
