@@ -2,7 +2,7 @@
   "kind": "ingress",
   "$schema": "https://facets-cloud.github.io/facets-schemas/schemas/loadbalancer/ingress.schema.json",
   "flavor": "aws_alb",
-  "disabled": true,
+  "disabled": false,
   "version": "0.2",
   "lifecycle": "ENVIRONMENT",
   "provided": false,
@@ -19,7 +19,7 @@
     "rules": {
       "grafana1": {
         "service_name": "prometheus-operator-grafana",
-        "path": "/",
+        "path": "/api/health",
         "port": 80,
         "domain_prefix": "grafana1",
         "annotations": {
