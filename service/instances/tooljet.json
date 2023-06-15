@@ -16,7 +16,7 @@
       }
     },
     "env": {
-      "PG_HOST": "${postgres.name.out.interfaces.writer.host}"
+      "PG_HOST": "${postgres.postgres.out.interfaces.writer.host}"
     },
     "runtime": {
       "ports": {
