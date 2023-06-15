@@ -17,13 +17,13 @@
     "grpc": false,
     "domains": {},
     "rules": {
-      "tooljet": {
+      "grafana1": {
         "service_name": "tooljet",
-        "path": "/",
+        "path": "/api/health",
         "port": 3000,
         "domain_prefix": "tooljet",
         "annotations": {
-          "app": "tooljet"
+          "app": ""
         },
         "disable_auth": false
       }
