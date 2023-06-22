@@ -19,7 +19,7 @@
         "comment": "tooljet",
         "domain_prefix": "",
         "path": "/api/health",
-        "port": "${service.tooljet.out.interfaces.main.port}",
+        "port": "${service.tooljet.out.interfaces.http.port}",
         "service_name": "${service.tooljet.out.interfaces.main.name}"
       }
     }
