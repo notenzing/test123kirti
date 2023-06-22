@@ -23,6 +23,10 @@
         "http": {
           "port": "3000",
           "protocol": "tcp"
+        },
+        "main": {
+          "port": "8080",
+          "protocol": "tcp"
         }
       },
       "size": {
