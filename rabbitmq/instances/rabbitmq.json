@@ -4,7 +4,7 @@
   "kind": "rabbitmq",
   "version": "latest",
   "depends_on": [],
-  "disabled": true,
+  "disabled": false,
   "lifecycle": "ENVIRONMENT",
   "provided": false,
   "metadata": {
