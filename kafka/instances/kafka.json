@@ -3,7 +3,7 @@
   "kind": "kafka",
   "version": "0.2",
   "flavor": "k8s",
-  "disabled": true,
+  "disabled": false,
   "provided": false,
   "lifecycle": "ENVIRONMENT",
   "metadata": {},
