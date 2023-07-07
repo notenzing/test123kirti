@@ -4,7 +4,7 @@
   "conditional_on_intent": "kafka",
   "flavor": "default",
   "version": "latest",
-  "disabled": true,
+  "disabled": false,
   "metadata": {
     "name": "schedule"
   },
