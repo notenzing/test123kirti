@@ -1,0 +1,17 @@
+{
+  "$schema": "https://facets-cloud.github.io/facets-schemas/schemas/sqs/sqs.schema.json",
+  "version": "0.2",
+  "flavor": "default",
+  "kind": "sqs",
+  "provided": false,
+  "metadata": {
+    "name": "test-aws-sqs-queue"
+  },
+  "spec": {},
+  "advanced": {
+    "policy": "",
+    "redrive_policy": "",
+    "kms_master_key_id": "",
+    "tags": {}
+  }
+}
