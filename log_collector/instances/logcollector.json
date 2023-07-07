@@ -4,7 +4,7 @@
   "flavor": "loki_s3",
   "version": "latest",
   "lifecycle": "ENVIRONMENT_BOOTSTRAP",
-  "disabled": true,
+  "disabled": false,
   "provided": false,
   "depends_on": [],
   "metadata": {
